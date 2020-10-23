@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 478, y: 392}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 477, y: 371}
+  m_MaxSize: {x: 14000, y: 14021}
   vertical: 0
-  controlID: 7628
+  controlID: 135
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,8 +133,8 @@ MonoBehaviour:
     y: 0
     width: 276
     height: 947
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 4}
   m_Panes:
   - {fileID: 4}
@@ -170,7 +170,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c8faffff5cfbffff
+      m_ExpandedIDs: 5cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -215,10 +215,10 @@ MonoBehaviour:
     y: 0
     width: 1644
     height: 947
-  m_MinSize: {x: 377, y: 392}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 377, y: 371}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 7629
+  controlID: 136
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 377, y: 121}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 7630
+  controlID: 137
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_CachedPref: 220
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 15674
+  m_LastInspectedObjectInstanceID: 15914
   m_LastVerticalScrollValue: 0
   m_AssetGUID: 
   m_InstanceID: 0
@@ -500,8 +500,8 @@ MonoBehaviour:
     y: 669
     width: 1644
     height: 278
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -547,21 +547,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TextMesh Pro/Dimbo
+    - Assets/Art/HUD
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 92
   m_LastFolders:
-  - Assets/TextMesh Pro/Dimbo
+  - Assets/Art/HUD
   m_LastFoldersGridSize: 92
   m_LastProjectPath: D:\Github\Calculo\Calculo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 3}
-    m_SelectedIDs: f4400000
-    m_LastClickedID: 16628
-    m_ExpandedIDs: 00000000c83c0000f43c000000ca9a3b
+    m_SelectedIDs: 2a3e0000
+    m_LastClickedID: 15914
+    m_ExpandedIDs: 00000000dc3d00000c3e0000263e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,7 +589,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c03e0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c83c000000ca9a3b
+    m_ExpandedIDs: 00000000dc3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -614,8 +614,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 3a3d0000
-    m_LastClickedInstanceID: 15674
+    m_SelectedInstanceIDs: 2a3e0000
+    m_LastClickedInstanceID: 15914
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 8c400000a8430000f272000022730000a44100002042000040440000248f000046bb0000c8680000026d00001c460000dc9b0000685800000a6200002e580000ae580000b0580000b65f00001e590000c6510000d65100003658000052a7000016ab000074ad00003e5300006c560000d4600000d0600000645600008a6100005686000076620000faeb0000d8150100125d00003e620000b86d0000005d0000b68900008e4100003a640000de520000b2410000584f0000125600008a400000bc400000445a0000fa410000965f0000905500005061000050490000e2460000f0460000b8460000c6460000b445000022470000304700004247000000470000d04d0000de570000ba5700005e5c0500c8490000c2490000be490000d65e00005cdc0600a24e0000763a0000ea4900001c610000724e0000286c0000cc4c0000dc3a0000b23b0000a44d0000386a00004e50000038590000b8fc0000bcfc00000a7900000e790000744600007646000072460000784600007a4600007c4600007e46000080460000844600008646000082460000884600008a4600008c4600008e46000090460000f23b0000065c0000185c00002c6f00002a5c0000ca7100002ae9000094850000329d000064480000ba520000785100000e5900003e47000086000100028b0000e06d00003a820000f482000028730000fc7c0000fc1f0900763c0000e87c0000668100005a470000863f0000943a0000728d0000106401006c870000ce89000066800000368000007e470000ea3d0000e2800000387d0000307d00004c640100e43e0000be3d000038a10000186600001e6d0000c880000026790000a8510000ba3d0000c23d00004c4f000062530000c63d0000f6d9ffff805f000000000000925d00004e3c0000
     m_RenameOverlay:
@@ -633,7 +633,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
