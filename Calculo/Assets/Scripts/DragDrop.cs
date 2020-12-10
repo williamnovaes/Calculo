@@ -9,9 +9,20 @@ public class DragDrop : MonoBehaviour {
     protected Camera cam;
     private Vector2 m_Offset;
     private float m_Zcoord;
-    private Rigidbody2D bolaRigidbody;
+    [HideInInspector] public Rigidbody2D bolaRigidbody;
     private float gravityScale;
     [HideInInspector] public bool prontoContar = false;
+
+    public void Initialize(Sprite sprite, bool adicao) {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.sprite = sprite;
+        if (!adicao) {
+            prontoContar = true;
+            OnClickAfterCount.AddListener(() => {
+                GeradorConta.Instance.HabilitarResultado();
+            });
+        }
+    }
         
     void Start() {
         cam = Camera.main;
@@ -43,6 +54,11 @@ public class DragDrop : MonoBehaviour {
     }
 
     private void OnMouseUp() {
+        ResetGravityScale();
+    }
+
+    public void ResetGravityScale() {
         bolaRigidbody.gravityScale = gravityScale;
+        bolaRigidbody.velocity = Vector2.zero;
     }
 }

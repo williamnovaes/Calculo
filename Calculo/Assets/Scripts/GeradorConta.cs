@@ -7,40 +7,92 @@ using System;
 using TMPro;
 
 public class GeradorConta : MonoBehaviour {
+    private static GeradorConta s_Instance;
+    public static GeradorConta Instance {
+        get {
+            if (s_Instance != null) {
+                return s_Instance;
+            }
+
+            s_Instance = FindObjectOfType<GeradorConta>();
+            return s_Instance;
+        }
+    }
 
     [Serializable]
     public class GenerateEvent : UnityEvent<int> {}
+    public bool isSoma = true;
     public BolinhaSpawner spawner;
     public TextMeshProUGUI firstNumber;
     public TextMeshProUGUI secondNumber;
+    public TMP_InputField inputResultado;
     public GenerateEvent OnGenerateFirst, OnGenerateSecond;
-    public UnityEvent OnRespostaCorreta;
+    public UnityEvent OnRespostaCorreta, OnRespostaErrada;
     private string resultado;
+    private int triggersDesativados = 0;
 
-    private void Start() {
-        GenerateNumbers();
+    private void Awake() {
+        if (s_Instance == null) {
+            s_Instance = this;
+            GenerateNumbers();
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     public void GenerateNumbers() {
-        int primeiroValor = UnityEngine.Random.Range(1, 10);
-        int segundoValor = UnityEngine.Random.Range(1, 10);
+        int primeiroValor = UnityEngine.Random.Range(1, 11);
+        int segundoValor = UnityEngine.Random.Range(1, 11);
+        
+        if (isSoma) {
+            firstNumber.text = primeiroValor.ToString();
+            secondNumber.text = segundoValor.ToString();
+            resultado = (primeiroValor + segundoValor).ToString();
+            spawner.Spawn(primeiroValor + segundoValor, isSoma);
+            OnGenerateFirst?.Invoke(primeiroValor);
+            OnGenerateSecond?.Invoke(segundoValor);
+        } else {
+            int _maior, _menor;
+            if (primeiroValor > segundoValor) {
+                _maior = primeiroValor;
+                _menor = segundoValor;
+            } else {
+                _maior = segundoValor;
+                _menor = primeiroValor;
+            }
 
-        firstNumber.text = primeiroValor.ToString();
-        secondNumber.text = segundoValor.ToString();
-        resultado = (primeiroValor + segundoValor).ToString();
+            firstNumber.text = _maior.ToString();
+            secondNumber.text = _menor.ToString();
+            resultado = (_maior - _menor).ToString();
+            spawner.Spawn(_maior, isSoma);
+        }
 
-        spawner.Spawn(primeiroValor + segundoValor);
         OnGenerateFirst?.Invoke(primeiroValor);
         OnGenerateSecond?.Invoke(segundoValor);
     }
 
     public void ChecarResultado(string _resultado) {
+        if (resultado == null || _resultado.Equals("") || _resultado.Equals(" ")) {
+            return;
+        }
+
         if (_resultado.Equals(resultado)) {
             OnRespostaCorreta?.Invoke();
-            Debug.Log("Acertou!");
         } else {
-            Debug.Log("Errou!");
+            OnRespostaErrada?.Invoke();
+        }
+    }
+
+    public void HabilitarResultado() {
+        if (inputResultado != null) {
+            inputResultado.interactable = true;
+        }
+    }
+
+    public void DesativarTrigger() {
+        triggersDesativados++;
+        if (triggersDesativados == 2) {
+            HabilitarResultado();
         }
     }
 }
-

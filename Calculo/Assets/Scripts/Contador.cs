@@ -10,14 +10,15 @@ public class Contador : MonoBehaviour {
         DragDrop dd = other.GetComponent<DragDrop>();
         if (dd != null) {
             dd.prontoContar = true;
-            // dd.enabled = false;
+            dd.ResetGravityScale();
             contador++;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if (contador >= limite) {
-            GetComponent<BoxCollider2D>().isTrigger = false;        
+            GetComponent<BoxCollider2D>().isTrigger = false;
+            GeradorConta.Instance.DesativarTrigger();
         }
     }
 

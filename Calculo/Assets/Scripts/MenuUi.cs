@@ -7,8 +7,12 @@ using  UnityEditor;
 #endif
 
 public class MenuUi : MonoBehaviour {
-    public void Iniciar() {
-        SceneManager.LoadScene("MainScene");
+    public void IniciarAdicao() {
+        SceneManager.LoadScene("Adicao");
+    }
+
+    public void IniciarSubtracao() {
+        SceneManager.LoadScene("Subtracao");
     }
 
     public void Reiniciar() {
