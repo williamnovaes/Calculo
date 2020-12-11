@@ -610,10 +610,12 @@ MonoBehaviour:
   xArea: 0.7
   yArea: 1
   sprites:
-  - {fileID: 6085690111427880739, guid: cb10c18bd0cec9149805b19c44714fa1, type: 3}
-  - {fileID: 999246973315434398, guid: cb10c18bd0cec9149805b19c44714fa1, type: 3}
-  - {fileID: 3705527464145901310, guid: cb10c18bd0cec9149805b19c44714fa1, type: 3}
-  - {fileID: 6327286592391673594, guid: cb10c18bd0cec9149805b19c44714fa1, type: 3}
+  - {fileID: -5442753344095514102, guid: bd46f8a3ad3ad9546be82fcc52bfd7d1, type: 3}
+  - {fileID: 4728592007128127450, guid: bd46f8a3ad3ad9546be82fcc52bfd7d1, type: 3}
+  - {fileID: 2996168158350324067, guid: bd46f8a3ad3ad9546be82fcc52bfd7d1, type: 3}
+  - {fileID: -6107749430151542890, guid: bd46f8a3ad3ad9546be82fcc52bfd7d1, type: 3}
+  - {fileID: -5643043021962083978, guid: bd46f8a3ad3ad9546be82fcc52bfd7d1, type: 3}
+  - {fileID: 2940870549018546263, guid: bd46f8a3ad3ad9546be82fcc52bfd7d1, type: 3}
 --- !u!212 &178081482
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5406,7 +5408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -21.599976}
+  m_AnchoredPosition: {x: 0, y: -21.600098}
   m_SizeDelta: {x: 558.27515, y: 122.4848}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1980094057
